@@ -8,6 +8,6 @@ public class KisiService {
 
     public Kisi sabitKisiDondur() {
 
-        return new Kisi("Nazife Naz", "Coskun", 23, "Bilgisayar Muhendisi");
+        return new Kisi("Eymen Naz", "Coskun", 23, "Bilgisayar Muhendisi");
     }
 }
