@@ -1,88 +1,121 @@
-Calculator App.
+# Calculator App
 
-Bu proje Spring Boot ile yaptığım basit bir hesap makinesi API projesidir.
+Bu projede Spring Boot ile basit bir hesap makinesi API projesi yaptım.
 
-Projede toplama çıkarma çarpma ve bölme işlemleri yapılabiliyor.
+Projede toplama çıkarma çarpma ve bölme işlemleri yapılabiliyor. Kullanıcı birden fazla sayı gönderiyor ve uygulama sonucu hesaplayıp geri döndürüyor.
 
-Kullanıcı birden fazla sayı gönderiyor.
+Bu projeyi Java ve Spring Boot kullanmayı öğrenmek için hazırladım. Kodları controller service ve dto olarak ayırdım.
 
-Uygulama gelen sayılara göre sonucu hesaplayıp geri döndürüyor.
+Bu şekilde proje daha düzenli oldu ve her dosyanın görevi daha anlaşılır hale geldi.
 
-Bu projeyi Java ve Spring Boot kullanmayı öğrenmek için yaptım.
+## Özellikler
 
-Kodları controller service ve dto olarak ayırdım.
+- Toplama işlemi yapma
+- Çıkarma işlemi yapma
+- Çarpma işlemi yapma
+- Bölme işlemi yapma
+- Birden fazla sayı ile işlem yapma
+- API üzerinden istek alma
+- Sonucu kullanıcıya geri döndürme
+- Sabit kişi bilgisi döndüren örnek alan
+- Controller service ve dto yapısı kullanma
+- Spring Boot ile çalışma
 
-Bu şekilde proje daha düzenli oldu.
+## Kullanılan Teknolojiler
 
-Özellikler.
+- Java
+- Spring Boot
+- Maven
+- Lombok
+- REST API
 
-Toplama işlemi yapar.
-
-Çıkarma işlemi yapar.
-
-Çarpma işlemi yapar.
-
-Bölme işlemi yapar.
-
-Birden fazla sayı ile işlem yapabilir.
-
-Sabit kişi bilgisi döndüren örnek bir alan vardır.
-
-API mantığını öğrenmek için hazırlanmıştır.
-
-Kullanılan teknolojiler.
-
-Java.
-
-Spring Boot.
-
-Maven.
-
-Lombok.
-
-REST API.
-
-Projeyi çalıştırma.
+## Projeyi Çalıştırma
 
 Projeyi çalıştırmak için önce proje klasörü açılır.
 
 Sonra Maven ile uygulama başlatılır.
 
-Uygulama çalışınca istekler API üzerinden gönderilir.
+```txt
+./mvnw spring-boot:run
+```
+
+Uygulama çalışınca API istekleri gönderilebilir.
 
 Proje varsayılan olarak seksen numaralı portta çalışır.
 
-Proje yapısı.
+```txt
+http://localhost
+```
 
-Controller klasörü dışarıdan gelen istekleri karşılar.
+## API İşlemleri
 
-Service klasörü hesaplama işlemlerini yapar.
+Toplama işlemi için bu adres kullanılır.
 
-Dto klasörü gelen ve dönen verilerin modelini tutar.
+```txt
+/api/topla
+```
 
-Application dosyası projenin başlangıç dosyasıdır.
+Çıkarma işlemi için bu adres kullanılır.
 
-Application properties dosyasında uygulama ayarları vardır.
+```txt
+/api/cikar
+```
 
-Dosyalar kısaca.
+Çarpma işlemi için bu adres kullanılır.
 
-HesapMakinesiApplication java dosyası uygulamayı başlatır.
+```txt
+/api/carp
+```
 
-HesapController java dosyası hesaplama isteklerini alır.
+Bölme işlemi için bu adres kullanılır.
 
-HesapService java dosyası toplama çıkarma çarpma ve bölme işlemlerini yapar.
+```txt
+/api/bol
+```
 
-Sayilar java dosyası kullanıcıdan gelen sayı listesini tutar.
+Örnek kişi bilgisi için bu adres kullanılır.
 
-KisiController java dosyası kişi bilgisi için örnek istek alanıdır.
+```txt
+/api/kisi/getir
+```
 
-KisiService java dosyası sabit kişi bilgisini döndürür.
+## Proje Yapısı
 
-Kisi java dosyası kişi bilgilerini tutar.
+```txt
+src/
+  main/
+    java/
+      com/
+        naz/
+          hesapmakinesi/
+            HesapMakinesiApplication.java
+            controller/
+              HesapController.java
+              KisiController.java
+            dto/
+              Kisi.java
+              Sayilar.java
+            service/
+              HesapService.java
+              KisiService.java
+    resources/
+      application.properties
+pom.xml
+```
 
-Pom xml dosyası proje paketlerini ve Maven ayarlarını tutar.
+## Dosyalar Kısaca
 
-Kısa açıklama.
+- HesapMakinesiApplication java dosyası uygulamayı başlatıyor
+- HesapController java dosyası hesaplama isteklerini alıyor
+- HesapService java dosyası toplama çıkarma çarpma ve bölme işlemlerini yapıyor
+- Sayilar java dosyası kullanıcıdan gelen sayı listesini tutuyor
+- KisiController java dosyası kişi bilgisi için örnek istek alanı oluşturuyor
+- KisiService java dosyası sabit kişi bilgisini döndürüyor
+- Kisi java dosyası kişi bilgilerini tutuyor
+- application properties dosyası uygulama ayarlarını tutuyor
+- pom xml dosyası proje paketlerini ve Maven ayarlarını tutuyor
+
+## Kısa Açıklama
 
 Bu proje basit bir hesap makinesi API projesidir.
 
